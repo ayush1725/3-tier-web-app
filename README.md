@@ -61,8 +61,7 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: notesapp
+      - ".env"
     volumes:
       - db_data:/var/lib/mysql
     networks:
